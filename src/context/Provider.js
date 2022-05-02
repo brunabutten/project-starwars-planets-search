@@ -18,13 +18,11 @@ function Provider({ children }) {
   }, []);
 
   useEffect(() => {
-    let inputNome = data.filter(({ name }) =>
-      // eslint-disable-next-line implicit-arrow-linebreak
-      name.toLowerCase().includes(filterByName.toLowerCase()));
+    let inputNome = data.filter(({ name }) => name.toLowerCase()
+      .includes(filterByName.toLowerCase()));
     if (search.length) {
-      inputNome = inputNome.filter((item) =>
-        // eslint-disable-next-line implicit-arrow-linebreak
-        defOpcao.every(({ column, comparison, value }) => {
+      inputNome = inputNome.filter((item) => defOpcao
+        .every(({ column, comparison, value }) => {
           if (comparison === 'maior que') {
             return Number(item[column]) > Number(value);
           }
