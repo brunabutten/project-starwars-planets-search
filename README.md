@@ -28,7 +28,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
     `Requisitos obrigatórios:`
     - [1 - Faça uma requisição para o endpoint /planets da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna residents](#1---faça-uma-requisição-para-o-endpoint-planets-da-api-de-star-wars-e-preencha-uma-tabela-com-os-dados-retornados-com-exceção-dos-da-coluna-residents)
-    - [2 - Filtre a tabela através de um texto, inserido num *campo de texto*, exibindo somente os planetas cujos nomes incluam o texto digitado](#2---filtre-a-tabela-através-de-um-texto-inserido-num-campo-de-texto-exibindo-somente-os-planetas-cujos-nomes-incluam-o-texto-digitado)
+    - [2 - Filtre a tabela através de um texto, inserido num _campo de texto_, exibindo somente os planetas cujos nomes incluam o texto digitado](#2---filtre-a-tabela-através-de-um-texto-inserido-num-campo-de-texto-exibindo-somente-os-planetas-cujos-nomes-incluam-o-texto-digitado)
     - [3 - Crie um filtro para valores numéricos](#3---crie-um-filtro-para-valores-numéricos)
     - [4 - Implemente múltiplos filtros numéricos](#4---implemente-múltiplos-filtros-numéricos)
     - [5 - Não utilize filtros repetidos](#5---não-utilize-filtros-repetidos)
@@ -46,11 +46,11 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 Nesse projeto, você será capaz de:
 
-* Utilizar a _Context API_ do **React** para gerenciar estado.
-* Utilizar o _React Hook useState_;
-* Utilizar o _React Hook useContext_;
-* Utilizar o _React Hook useEffect_;
-* Criar _React Hooks_ customizados.
+- Utilizar a _Context API_ do **React** para gerenciar estado.
+- Utilizar o _React Hook useState_;
+- Utilizar o _React Hook useContext_;
+- Utilizar o _React Hook useEffect_;
+- Criar _React Hooks_ customizados.
 
 ---
 
@@ -89,35 +89,35 @@ Este repositório já contém um _template_ de uma aplicação React criado e co
 ## Antes de começar a desenvolver
 
 1. Clone o repositório
-  * `git clone git@github.com:tryber/sd-019-c-project-starwars-planets-search.git`
-  * Entre na pasta do repositório que você acabou de clonar:
-    * `cd sd-019-c-project-starwars-planets-search`
+  - `git clone git@github.com:tryber/sd-019-c-project-starwars-planets-search.git`
+  - Entre na pasta do repositório que você acabou de clonar:
+    - `cd sd-019-c-project-starwars-planets-search`
 
 2. Instale as dependências e inicialize o projeto
-  * Instale as dependências:
-    * `npm install`
-  * Inicialize o projeto:
-    * `npm start` (uma nova página deve abrir no seu navegador com um texto simples)
-  * Verifique que os testes estão executando:
-    * `npm test` (os testes devem rodar e falhar)
+  - Instale as dependências:
+    - `npm install`
+  - Inicialize o projeto:
+    - `npm start` (uma nova página deve abrir no seu navegador com um texto simples)
+  - Verifique que os testes estão executando:
+    - `npm test` (os testes devem rodar e falhar)
 
 3. Crie uma branch a partir da branch `master`
 
-  * Verifique que você está na branch `master`
-    * Exemplo: `git branch`
-  * Se não estiver, mude para a branch `master`
-    * Exemplo: `git checkout master`
-  * Agora, crie uma branch onde você vai guardar os commits do seu projeto
+  - Verifique que você está na branch `master`
+    - Exemplo: `git branch`
+  - Se não estiver, mude para a branch `master`
+    - Exemplo: `git checkout master`
+  - Agora, crie uma branch onde você vai guardar os commits do seu projeto
 
 ---
 
 ## Durante o desenvolvimento
 
-* Faça `commits` das alterações que você fizer no código regularmente
+- Faça `commits` das alterações que você fizer no código regularmente
 
-* Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
+- Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
 
-* Os comandos que você utilizará com mais frequência são:
+- Os comandos que você utilizará com mais frequência são:
   1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
   2. `git add` _(para adicionar arquivos ao stage do Git)_
   3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
@@ -156,7 +156,7 @@ Por exemplo, se o requisito pedir "crie um botão e adicione o id de teste (ou `
 ou
 
 ```html
-<a data-testid="my-action"><a/>
+<a data-testid="my-action"><a /></a>
 ```
 
 O atributo `data-testid="my-action"` servirá para a React Testing Library identificar o elemento e, dessa forma, será possível realizar os testes unitários focados no comportamento da aplicação.
@@ -208,14 +208,14 @@ O que será verificado:
 ![image](req-1.png)
 
 
-### 2 - Filtre a tabela através de um texto, inserido num *campo de texto*, exibindo somente os planetas cujos nomes incluam o texto digitado
+### 2 - Filtre a tabela através de um texto, inserido num _campo de texto_, exibindo somente os planetas cujos nomes incluam o texto digitado
 
 Ele deve atualizar a tabela com os planetas que se encaixam no filtro à medida que o nome é digitado, sem ter que apertar um botão para efetuar a filtragem. Por exemplo, se digitar "Tatoo", o planeta "Tatooine" deve ser exibido. Você deve usar **Context API e Hooks** para fazer o gerenciamento do estado da aplicação e o texto digitado deve ser salvo num campo `{ filterByName: { name } }`. Por exemplo:
 
 ```javascript
 {
   filterByName: {
-    name: 'Tatoo'
+    name: "Tatoo";
   }
 }
 ```
@@ -236,14 +236,14 @@ O que será verificado:
 
 Ele funcionará com três seletores:
 
-  - O primeiro deve abrir um dropdown que permita a quem usa selecionar uma das seguintes colunas: `population`, `orbital_period`, `diameter`, `rotation_period` e `surface_water`. Deve ser uma tag `select` com a propriedade `data-testid='column-filter'`;
-  - O segundo deve determinar se a faixa de valor será `maior que`, `menor que` ou `igual a` o numero que virá a seguir. Uma tag `select` com a propriedade `data-testid='comparison-filter'`;
-  - O terceiro deve ser uma caixa de texto que só aceita números. Essa caixa deve ser uma tag `input` com a propriedade `data-testid='value-filter'`;
-  - Deve haver um botão para acionar o filtro, com a propriedade `data-testid='button-filter'`.
+ - O primeiro deve abrir um dropdown que permita a quem usa selecionar uma das seguintes colunas: `population`, `orbital_period`, `diameter`, `rotation_period` e `surface_water`. Deve ser uma tag `select` com a propriedade `data-testid='column-filter'`;
+ - O segundo deve determinar se a faixa de valor será `maior que`, `menor que` ou `igual a` o numero que virá a seguir. Uma tag `select` com a propriedade `data-testid='comparison-filter'`;
+ - O terceiro deve ser uma caixa de texto que só aceita números. Essa caixa deve ser uma tag `input` com a propriedade `data-testid='value-filter'`;
+ - Deve haver um botão para acionar o filtro, com a propriedade `data-testid='button-filter'`.
 
 A combinação desses três seletores deve filtrar os dados da tabela de acordo com a coluna correspondente e com os valores escolhidos. Por exemplo:
-  - A seleção `population | maior que | 100000` - Seleciona somente planetas com mais de 100000 habitantes.
-  - A seleção `diameter | menor que | 8000` - Seleciona somente planetas com diâmetro menor que 8000.
+- A seleção `population | maior que | 100000` - Seleciona somente planetas com mais de 100000 habitantes.
+- A seleção `diameter | menor que | 8000` - Seleciona somente planetas com diâmetro menor que 8000.
 
 Você deve usar **Context API e Hooks** para fazer o gerenciamento do estado da aplicação. No contexto, esses valores devem ser salvos em um outro campo `{ filterByNumericValues: [{ column, comparison, value }] }`. Por exemplo:
 
@@ -251,15 +251,16 @@ Você deve usar **Context API e Hooks** para fazer o gerenciamento do estado da 
 {
   filterByNumericValues: [
     {
-      column: 'population',
-      comparison: 'maior que',
-      value: '100000',
-    }
-  ]
+      column: "population",
+      comparison: "maior que",
+      value: "100000",
+    },
+  ];
 }
 ```
 
 O que será verificado:
+
 ```
 - Renderiza o filtro de coluna
 - Renderiza o filtro de comparação
@@ -277,7 +278,7 @@ O que será verificado:
 
 Deverá ser possível adicionar múltiplos filtros numéricos, todos os filtros adicionados devem funcionar de forma conjunta.
 
-Por exemplo, você pode filtrar pelos planetas que possuam _Orbital period > 400_  **e** _Diameter < 10000_.
+Por exemplo, você pode filtrar pelos planetas que possuam _Orbital period > 400_ **e** _Diameter < 10000_.
 
 O que será verificado:
 ```
@@ -295,14 +296,14 @@ Por exemplo: O primeiro filtro tem as seguintes seleções: `population | maior 
 {
   filterByNumericValues: [
     {
-      column: 'population',
-      comparison: 'maior que',
-      value: '100000',
+      column: "population",
+      comparison: "maior que",
+      value: "100000",
     },
     {
-      column: 'diameter',
-      comparison: 'menor que',
-      value: '8000',
+      column: "diameter",
+      comparison: "menor que",
+      value: "8000",
     }
   ]
 }
@@ -376,10 +377,10 @@ O que será verificado:
 
 Para **"entregar"** seu projeto, siga os passos a seguir:
 
-* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas
-  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**
-  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**
-  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-00`
+- Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas
+  - No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**
+  - No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**
+  - No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-00`
 
 ---
 
